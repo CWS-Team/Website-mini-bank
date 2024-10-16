@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.content {
+    display: flex; /* Keep sidebar and main content side by side */
+    flex: 1; /* Allow content to take available space */
+}
+
+header {
+    position: relative;
+}
+
+.yellow-bar {
+    background-color: #ffeb3b;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header-blue {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003da6;
+    padding: 10px;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+}
+
+.header-title {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #c4d8f9;
+    padding: 15px;
+    max-height: 500px; /* Set max height to make scroll visible */
+    overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    
+}
+
+.submit-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.submit-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.date {
+    background-color: #ffeb3b;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #c4c4c4;
+}
+
+h1 {
+    color: #0072bc;
+    margin-bottom: 20px;
+}
+
+/* Style untuk form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #0072bc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005999;
+}
+
+.footer-content {
+    background-color: #003da6;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: rgb(15, 15, 15);
+    padding: 20px 0;
+}
+
+
+.footer-content::before {
+    content: "";
+    position: absolute;
+    top: -70px; /* Sesuaikan untuk efek lengkung */
+    left: 0;
+    right: 0;
+    height: 80px; /* Tinggi lengkungan */
+    background: #003da6;
+    border-radius: 50%; /* Lengkung */
+    transform: translateY(-100%); /* Mengatur posisi lengkung */
+}
+
+.footer-content img.logo2 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+}
+
+.footer-content p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+.white-bar {
+    background-color: white;
+    height: 30px;
+   
+    padding-right: 20px;
+}
