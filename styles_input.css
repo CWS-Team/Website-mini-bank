@@ -201,3 +201,19 @@ button:hover {
    
     padding-right: 20px;
 }
+
+.bordered-table {
+    width: 100%;
+    border-collapse: collapse; /* Menggabungkan border */
+}
+
+.bordered-table th, .bordered-table td {
+    border: 1px solid black; /* Menambahkan border hitam di sekitar sel */
+    padding: 8px;
+    text-align: left;
+}
+
+.bordered-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
