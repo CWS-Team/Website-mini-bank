@@ -59,8 +59,8 @@ $conn->close();
                     <li><a href="#">Pembelian</a></li>
                     <li><a href="#">Pembayaran</a></li>
                     <li><a href="#">Pembayaran e-Commerce</a></li>
-                    <li><a href="transfer_dana.html">Transfer Dana</a></li>
-                    <li><a href="input_saldo.html">Input Saldo</a></li>
+                    <li><a href="transfer_dana.php">Transfer Dana</a></li>
+                    <li><a href="input_saldo.php">Input Saldo</a></li>
                     <li><a href="info_saldo.php">Informasi Rekening</a></li>
                     <li><a href="#">Informasi Kartu Kredit</a></li>
                     <li><a href="#">Informasi Kredit Konsumer</a></li>
@@ -75,8 +75,8 @@ $conn->close();
             </div>
 
             <div class="main-content">
-                <p class="date">Tanggal : 25/06/2014 Jam : 15:23:09</p>
-                <p class="login-info">Login Terakhir Anda tanggal : 25/06/2014 15:21:00</p>
+            <p class="date">Tanggal : <strong><?php echo date("d/m/Y"); ?></strong> Jam : <strong><?php echo date("H:i:s"); ?></strong></p>
+                <p class="login-info">Login Terakhir Anda tanggal : <strong><?php echo date("d/m/Y   H:i:s"); ?></strong> 
                 <br>
                 <br>
                 <h1>HANAFI, Selamat Datang Di Internet Banking BCA</h1>

@@ -11,7 +11,7 @@
         <header>
             <img src="logo.png" alt="Klik BCA Logo">
             <div class="session-info">
-                <span>Tanggal : 26/06/2014 Jam : 08:31:17</span>
+                <p class="date">Tanggal : <strong><?php echo date("d/m/Y"); ?></strong> Jam : <strong><?php echo date("H:i:s"); ?></strong></p>
             </div>
         </header>
 
