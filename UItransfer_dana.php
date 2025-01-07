@@ -23,47 +23,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil data dari form
     $jumlah = $_POST['jumlah'];
     $rekening_tujuan = $_POST['rekening_tujuan'];
-    
-    // Menyusun query untuk memasukkan data ke dalam tabel t_transaction dengan prepared statements
-    $sql = "INSERT INTO t_transaction (
-        m_customer_id, mti, transaction_type, card_number, transaction_amount,
-        fee_indicator, fee, transmission_date, transaction_date, value_date,
-        conversion_rate, stan, merchant_type, terminal_id, reference_number,
-        approval_number, response_code, currency_code, customer_reference, biller_name,
-        from_account_number, to_account_number, from_account_type, to_account_type,
-        balance, description, to_bank_code, execution_type, status, translation_code,
-        free_data1, free_data2, free_data3, free_data4, free_data5, delivery_channel,
-        delivery_channel_id, created, created_by, updated, updated_by, archive
-    ) VALUES (
-        NULL, '0000', '01', NULL, ?, '0', '0', NOW(), NOW(), NOW(),
-        '1', '000000', '0000', NULL, NULL, NULL, NULL, 'IDR', NULL, NULL, ?, 
-        NULL, NULL, '00', '00', NULL, NULL, NULL, 'N', 'Pending', NULL, NULL, NULL,
-        NULL, NULL, 'WEB', '1', NOW(), 1, NOW(), 1, 0
-    )";
+    $rekening_asal = $_POST['rekening_asal'];  // Menambahkan rekening asal
+    $berita = $_POST['berita'];
+    $kode = $_POST['kode'];
+    $keybca_response = $_POST['keybca_response'];
+    $keybca_response2 = $_POST['keybca_response2'];
+    $jenis_transfer = $_POST['jenis_transfer'];
+// Menyiapkan statement untuk menghindari SQL injection
+if ($stmt = $conn->prepare($sql)) {
+    // Binding parameter sesuai dengan jumlah dan jenis parameter
+    $stmt->bind_param("ssssssssssssssssssssssssssssssssssssssss", 
+        $jumlah, $rekening_tujuan, $rekening_asal, $berita, $kode, 
+        $keybca_response, $keybca_response2, $jenis_transfer, 
+        $m_customer_id, $mti, $transaction_type, $card_number, $fee_indicator, 
+        $fee, $transmission_date, $transaction_date, $value_date, 
+        $conversion_rate, $stan, $merchant_type, $terminal_id, 
+        $reference_number, $approval_number, $response_code, $currency_code, 
+        $customer_reference, $biller_name, $from_account_number, 
+        $to_account_number, $from_account_type, $to_account_type, 
+        $balance, $description, $to_bank_code, $execution_type, 
+        $status, $translation_code, $free_data1, $free_data2, 
+        $free_data3, $free_data4, $free_data5, $delivery_channel, 
+        $delivery_channel_id, $created, $created_by, $updated, 
+        $updated_by, $archive
+    );
 
-
-    // Menyiapkan statement untuk menghindari SQL injection
-    if ($stmt = $conn->prepare($sql)) {
-        // Binding parameter (jumlah, rekening_tujuan)
-        $stmt->bind_param("ss", $jumlah, $rekening_tujuan);
-
-        // Mengeksekusi query
-        if ($stmt->execute()) {
-            echo "Transfer berhasil!";
-        } else {
-            echo "Error: " . $stmt->error;
-        }
-
-        // Menutup statement
-        $stmt->close();
+    // Mengeksekusi query
+    if ($stmt->execute()) {
+        echo "Transfer berhasil!";
     } else {
-        echo "Prepared statement gagal: " . $conn->error;
+        echo "Error: " . $stmt->error;
     }
+
+    // Menutup statement
+    $stmt->close();
+} else {
+    echo "Prepared statement gagal: " . $conn->error;
 }
+
 
 // Menutup koneksi
 $conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
