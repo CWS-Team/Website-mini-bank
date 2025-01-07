@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7e7ff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+header {
+    background-color: #ffcc00;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+header img {
+    width: 120px;
+}
+
+.session-info {
+    color: #333;
+    font-weight: bold;
+}
+
+.main-content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.left-menu {
+    width: 25%;
+    background-color: #e7e7ff;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.left-menu ul {
+    list-style: none;
+}
+
+.left-menu ul li {
+    padding: 15px 0;
+    color: #003399;
+    font-weight: normal;
+}
+
+.left-menu ul li:first-child {
+    font-weight: bold;
+}
+
+.left-menu .back-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #003399;
+    font-weight: bold;
+}
+
+.transfer-form {
+    width: 75%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.transfer-form h2 {
+    font-size: 18px;
+    color: #003399;
+    margin-bottom: 20px;
+}
+
+.transfer-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.transfer-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.transfer-form input[type="text"], 
+.transfer-form input[type="password"], 
+.transfer-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #003399;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #002080;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #003399;
+    font-size: 12px;
+}
+.rekening-asal-container {
+    margin-bottom: 20px;
+}
+.rekening-tujuan-container {
+    margin-bottom: 20px;
+}
+
+
+
+
+.rekening-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.rekening-dropdown span {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.rekening-dropdown select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
