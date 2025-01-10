@@ -1,11 +1,5 @@
 <?php 
-// Menghubungkan ke database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bank";
-
-// Buat koneksi
+include 'Koneksi.php'; 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Cek koneksi
@@ -102,7 +96,7 @@ $conn->close();
         </div>
         <div class="header-blue">
             <div class="header-left">
-                <img src="logo.png" alt="BCA Logo" class="logo">
+                <img src="Asset/logo.png" alt="BCA Logo" class="logo">
                 <span class="header-title">INDIVIDUAL</span>
             </div>
         </div>
@@ -120,7 +114,7 @@ $conn->close();
                 <li><a href="#">Fund Account</a></li>
                 <li><a href="#">Balance Inquiry RDN</a></li>
                 <hr>
-                <li><a href="home.php">Back <p>to Main Menu</p></a></li>
+                <li><a href="index.php">Back <p>to Main Menu</p></a></li>
             </ul>
         </div>
         <div class="main-content">
@@ -174,7 +168,7 @@ $conn->close();
     <footer>
         <div class="footer-content">
             <div class="white-bar">
-                <p>Copyright &copy; 2000 <img src="bca.png" alt="Bank BCA" class="logo2"> All Rights Reserved</p>
+                <p>Copyright &copy; 2000 <img src="Asset/bca.png" alt="Bank BCA" class="logo2"> All Rights Reserved</p>
             </div>
         </div>
     </footer>

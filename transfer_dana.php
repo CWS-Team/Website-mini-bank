@@ -1,3 +1,31 @@
+<?php
+// Memanggil file koneksi
+include 'Koneksi.php';
+
+// Ambil data dari form
+$m_customer_id = 1; // Sesuaikan dengan id customer yang sedang login
+$transaction_type = '01'; // Contoh transaksi transfer
+$from_account_number = $_POST['rekening'];
+$to_account_number = $_POST['rekening_tujuan'];
+$transaction_amount = $_POST['jumlah'];
+$description = $_POST['berita'];
+$status = 'SUCCESS'; // Contoh status transaksi, ini bisa diubah sesuai kondisi
+
+// Validasi input (opsional, bisa ditambahkan lebih lanjut)
+
+// Menyimpan data ke tabel t_transaction
+$sql = "INSERT INTO t_transaction (m_customer_id, transaction_type, from_account_number, to_account_number, transaction_amount, description, status)
+        VALUES ('$m_customer_id', '$transaction_type', '$from_account_number', '$to_account_number', '$transaction_amount', '$description', '$status')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Transfer berhasil disimpan!";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +37,7 @@
 <body>
     <div class="container">
         <header>
-            <img src="logo.png" alt="Klik BCA Logo">
+            <img src="Asset/logo.png" alt="Klik BCA Logo">
             <div class="session-info">
                 <p class="date">Tanggal : <strong><?php echo date("d/m/Y"); ?></strong> Jam : <strong><?php echo date("H:i:s"); ?></strong></p>
             </div>
@@ -24,7 +52,7 @@
                     <li>Transfer ke BCA Virtual Account</li>
                     <li>Transfer ke Rek. Bank lain Dalam Negeri</li>
                 </ul>
-                <a href="home.php" class="back-link">Kembali ke Menu Utama</a>
+                <a href="index.php" class="back-link">Kembali ke Menu Utama</a>
             </div>
 
             <div class="transfer-form">

@@ -1,32 +1,21 @@
 <?php
-// Pastikan sudah terhubung ke database
-include 'koneksi.php'; 
-
-// Query untuk mengambil data user
+include 'Koneksi.php'; 
 $sql = "SELECT customer_name, last_login FROM m_customer WHERE id = 1"; // Sesuaikan query dengan kebutuhan
 
-// Eksekusi query
 $result = $conn->query($sql);
 
-// Pengecekan apakah query berhasil dijalankan
 if ($result) {
-    // Jika ada hasil, lanjutkan pengecekan jumlah baris
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $userName = $row['m_customer'];
         $lastLogin = $row['last_login'];
     } else {
-        // Jika tidak ada data ditemukan
         $userName = "Guest";
         $lastLogin = "N/A";
     }
 } else {
-    // Jika query gagal dijalankan
     echo "Error: " . $conn->error;
 }
-
-
-// Close the database connection
 $conn->close();
 ?>
 
@@ -47,7 +36,7 @@ $conn->close();
             </div>
             <div class="header-blue">
                 <div class="header-left">
-                    <img src="logo.png" alt="BCA Logo" class="logo">
+                    <img src="Asset/logo.png" alt="BCA Logo" class="logo">
                     <span class="header-title">INDIVIDUAL</span>
                 </div>
             </div>
@@ -99,7 +88,7 @@ $conn->close();
         <footer>
             <div class="footer-content">
                 <div class="white-bar">
-                    <p> Copyright &copy; 2000 <img src="bca.png" alt="Bank BCA" class="logo2">All Rights Reserved</p>
+                    <p> Copyright &copy; 2000 <img src="Asset/bca.png" alt="Bank BCA" class="logo2">All Rights Reserved</p>
                 </div>
             </div>
         </footer>

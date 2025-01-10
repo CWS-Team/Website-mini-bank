@@ -1,14 +1,6 @@
 <?php
-// Konfigurasi koneksi database
-$host = 'localhost'; // Sesuaikan dengan host database MySQL
-$dbname = 'bank'; // Ganti dengan nama database kamu
-$username = 'root'; // Username database
-$password = ''; // Password database, jika ada
-
-// Membuat koneksi ke database MySQL
+include 'Koneksi.php'; 
 $conn = new mysqli($host, $username, $password, $dbname);
-
-// Cek apakah koneksi berhasil
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -84,7 +76,7 @@ $result = $conn->query($sql);
         </div>
         <div class="header-blue">
             <div class="header-left">
-                <img src="logo.png" alt="BCA Logo" class="logo">
+                <img src="Asset/logo.png" alt="BCA Logo" class="logo">
                 <span class="header-title">INDIVIDUAL</span>
             </div>
         </div>
@@ -102,7 +94,7 @@ $result = $conn->query($sql);
                 <li><a href="#">Fund Account</a></li>
                 <li><a href="#">Balance Inquiry RDN</a></li>
                 <hr>
-                <li><a href="home.php">Back <p>to Main Menu</p></a></li>
+                <li><a href="index.php">Back <p>to Main Menu</p></a></li>
             </ul>
         </div>
         <div class="main-content">
@@ -138,7 +130,7 @@ $result = $conn->query($sql);
     <footer>
         <div class="footer-content">
             <div class="white-bar">
-                <p> Copyright &copy; 2000 <img src="bca.png" alt="Bank BCA" class="logo2">All Rights Reserved</p>
+                <p> Copyright &copy; 2000 <img src="Asset/bca.png" alt="Bank BCA" class="logo2">All Rights Reserved</p>
             </div>
         </div>
     </footer>
