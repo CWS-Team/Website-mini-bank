@@ -1,12 +1,6 @@
 <?php
 header('Content-Type: application/json'); // Set content type to JSON
-
-// Database connection details
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "bank";
-
+include 'Koneksi.php'; 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
