@@ -177,3 +177,26 @@ h1 {
    
     padding-right: 20px;
 }
+.bordered-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.bordered-table th, .bordered-table td {
+    padding: 8px 12px;
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+.bordered-table th {
+    background-color: #000000;
+}
+/* CSS untuk menu aktif */
+.sidebar ul li a.active {
+    background-color: #007bff;  /* Warna latar belakang untuk menu aktif */
+    color: white;               /* Warna teks untuk menu aktif */
+    font-weight: bold;          /* Menebalkan teks menu aktif */
+    padding-left: 20px;         /* Memberikan sedikit ruang di sebelah kiri */
+    border-radius: 5px;         /* Membuat sudut sedikit melengkung */
+}

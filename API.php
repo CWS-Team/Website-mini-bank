@@ -2,7 +2,7 @@
 header('Content-Type: application/json'); // Set content type to JSON
 include 'Koneksi.php'; 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
