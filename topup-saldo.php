@@ -82,17 +82,11 @@ $conn->close();
     <div class="container">
         <div class="content">
             <div class="sidebar">
-                <h2>INPUT SALDO</h2>
-                <hr>
                 <ul>
-                    <li><a href="#">Balance Inquiry</a></li>
-                    <li><a href="#">Account Statement</a></li>
-                    <li><a href="#">Time Deposit</a></li>
-                    <li><a href="#">Tahapan Berjangka</a></li>
-                    <li><a href="#">Fund Account</a></li>
-                    <li><a href="#">Balance Inquiry RDN</a></li>
-                    <hr>
-                    <li><a href="index.php">Back <p>to Main Menu</p></a></li>
+                    <li><a href="index.php">Beranda</a></li>
+                    <li><a href="info_saldo.php">Informasi Rekening</a></li>
+                    <li><a href="topup-saldo.php">Input Saldo</a></li>
+                    <li><a href="transfer.php">Transfer Dana</a></li>
                 </ul>
             </div>
             <div class="main-content">
