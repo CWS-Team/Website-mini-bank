@@ -29,7 +29,7 @@
             <ul>
             <li><a href="index.php" class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">Beranda</a></li>
 <li><a href="info_saldo.php" class="<?php echo ($current_page == 'info_saldo.php') ? 'active' : ''; ?>">Informasi Rekening</a></li>
-<li><a href="input_saldo.php" class="<?php echo ($current_page == 'input_saldo.php') ? 'active' : ''; ?>">Input Saldo</a></li>
+<li><a href="topup-saldo.php" class="<?php echo ($current_page == 'topup-saldo.php') ? 'active' : ''; ?>">Input Saldo</a></li>
 <li><a href="transfer.php" class="<?php echo ($current_page == 'transfer.php') ? 'active' : ''; ?>">Transfer Dana</a></li>
 
             </ul>
